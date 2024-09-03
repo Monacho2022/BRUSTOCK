@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Crear Cliente - BRUSTOCK</title>
+	<link rel="stylesheet" href="/CSS/Estilos.css">
+</head>
+<body>
+	<div id="contenedor">	
+		<header>
+			<h1>BRUSTOCK</h1>
+		</header>
+		<nav>
+            <ul>
+                <li><a href="/inicio.html">Inicio</a></li>
+            </ul>
+        </nav>
+		<section id="contenido">
+			<h2>Crear Cliente</h2>
+			<form action="/submit-cliente" method="post">
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre"><br><br>
+				<label for="apellido">Apellido:</label>
+				<input type="text" id="apellido" name="apellido"><br><br>
+				<label for="Cedula">Cedula:</label>
+				<input type="text" id="cc" name="cedula"><br><br>
+				<label for="direccion">Direccion:</label>
+				<input type="text" id="direccion" name="direccion"><br><br>
+				<label for="ciudad">Ciudad:</label>
+				<input type="text" id="ciudad" name="ciudad"><br><br>				
+				<label for="email">Correo Electrónico:</label>
+				<input type="email" id="email" name="email"><br><br>
+				<label for="telefono">Teléfono:</label>
+				<input type="tel" id="telefono" name="telefono"><br><br>
+				<input type="submit" value="Crear Cliente">
+			</form>
+		</section>
+		<footer>
+			<p>&copy; 2024 BRUSTOCK. Todos los derechos reservados.</p>
+		</footer>
+	</div>
+</body>
+</html>
