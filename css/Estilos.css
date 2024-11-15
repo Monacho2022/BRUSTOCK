@@ -1,0 +1,319 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background: #1A3B6D;
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+#contenedor { 
+    width: 90%;
+    max-width: 900px;
+    margin: 100px auto;
+    
+}
+
+/* Header */
+header {
+    background: #1A3B6D;
+    padding: 1%;
+    
+    
+}
+
+header h1 {
+    font-size: 4rem;
+    line-height: 1.5;
+    font-weight: bold;
+    font-family: 'Showcard Gothic', sans-serif;
+    margin: 10px;
+
+}
+
+/* Navigation */
+nav {
+    background: #1A3B6D;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+   
+}
+
+nav h2 {
+    font-size: 2rem;
+    font-family: 'Showcard Gothic', sans-serif;
+    margin: 0;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    font-size: 1.5rem;
+    background-color: #1A3B6D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Showcard Gothic', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.dropdown button:hover {
+    background-color: royalblue;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1A3B6D;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-size: 1rem;
+    font-family: 'MV Boli', sans-serif;
+}
+
+.dropdown-content a {
+    color: whitesmoke;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #00A4BD;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Content */
+#contenido {
+    width: 100%;
+    background: #1A3B6D;
+    margin-top: 5px;
+    padding: 20px;
+    
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.5rem;
+    font-family: 'Showcard Gothic', sans-serif;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+/* Estilo para las casillas de verificación (checkboxes) de procesos */
+input[type="checkbox"] {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Mejorar la visualización de la tabla de tallas con grid */
+.sizes-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sizes-list td {
+    width: 10%;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Modal de confirmación */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para el select de colores */
+select {
+    padding: 5px;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Espaciado para los inputs */
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 50%;
+    padding: 1px;
+    margin-bottom: 1px;
+    
+}
+
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #1A3B6D;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Form Styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-form label {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #1A3B6D;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    
+}
+
+.login-form input[type="submit"] {
+    background-color: #1A3B6D;
+    color: rgb(245, 245, 245);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: royalblue;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav h2 {
+        font-size: 1.5rem;
+    }
+
+    .dropdown button {
+        font-size: 1.2rem;
+    }
+
+    .dropdown-content {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    nav h2 {
+        font-size: 1.2rem;
+    }
+
+    .dropdown button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .dropdown-content {
+        font-size: 0.8rem;
+    }
+}
