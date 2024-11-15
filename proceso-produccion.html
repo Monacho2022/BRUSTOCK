@@ -5,6 +5,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Proceso de Producción - BRUSTOCK</title>
 	<link rel="stylesheet" href="/CSS/Estilos.css">
+    <style>
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 80%;
+            max-width: 300px;
+        }
+        .close {
+            float: right;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div id="contenedor">
@@ -22,30 +50,42 @@
                 <label for="producto">Referencia:</label>
                 <input type="text" id="producto" name="producto" placeholder="Ingrese la referencia" required><br><br>
                 
-                <label for="proceso">Proceso:</label>
-                <select id="proceso" name="proceso" required>
-                    <option value="" disabled selected>Seleccione un proceso</option>
-                    <option value="estampado">Estampado</option>
-                    <option value="costura">Costura</option>
-                    <option value="tintoreria">Tintorería</option>
-                    <option value="terminado">Terminado</option>
-                </select><br><br>
-
-                <label for="proveedor">Proveedor:</label>
-                <input type="text" id="proveedor" name="proveedor" placeholder="Ingrese el proveedor" required><br><br>
+                <label for="procesos">Procesos:</label><br><br>
+                <input class="checkbox-wrapper-47" type="checkbox" id="bordado" name="procesos[]" value="bordado">
+                <label for="bordado">Bordado</label><br>
                 
-                <label for="entrega">Entrega:</label>
-                <input type="number" id="entrega" name="entrega" placeholder="Cantidad entregada" required><br><br>
+                <input type="checkbox" id="estampado" name="procesos[]" value="estampado">
+                <label for="estampado">Estampado</label><br>
                 
-                <label for="tallas">Tallas:</label>
-                <select id="tallas" name="tallas" required>
-                    <option value="" disabled selected>Seleccione una Talla</option>
-                    <option value="6">6</option>
-                    <option value="8">8</option>
-                    <option value="10">10</option>
-                    <option value="14">14</option>
-                    <option value="16">16</option>
-                </select><br><br>
+                <input type="checkbox" id="costura" name="procesos[]" value="costura">
+                <label for="costura">Costura</label><br>
+                
+                <input type="checkbox" id="tintoreria" name="procesos[]" value="tintoreria">
+                <label for="tintoreria">Tintorería</label><br>
+                
+                <input type="checkbox" id="ribete" name="procesos[]" value="ribete">
+                <label for="ribete">Ribete</label><br>
+                
+                <input type="checkbox" id="ojal" name="procesos[]" value="ojal">
+                <label for="ojal">Ojal</label><br>
+                
+                <input type="checkbox" id="terminado" name="procesos[]" value="terminado">
+                <label for="terminado">Terminado</label><br><br>
+                
+                <div id="contenedor">
+                    <label for="tallas">Tallas:</label><br><br>
+                    <div class="sizes-list">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" name="tallas[]" value="6"> 6</td>
+                                <td><input type="checkbox" name="tallas[]" value="8"> 8</td>
+                                <td><input type="checkbox" name="tallas[]" value="10"> 10</td>
+                                <td><input type="checkbox" name="tallas[]" value="14"> 14</td>
+                                <td><input type="checkbox" name="tallas[]" value="16"> 16</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div><br><br>
                 
                 <label for="fecha">Fecha de Producción:</label>
                 <input type="date" id="fecha" name="fecha" required><br><br>
@@ -59,7 +99,7 @@
         </footer>
     </div>
 
-    <!-- Modal para mostrar mensaje de éxito -->
+    <!-- Modal for success message -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -68,28 +108,24 @@
     </div>
 
     <script>
-        // Referencias a los elementos del DOM
         const form = document.getElementById('produccionForm');
         const modal = document.getElementById('modal');
         const closeBtn = document.querySelector('.close');
 
-        // Muestra el modal al enviar el formulario
         form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita el envío real del formulario
-            modal.style.display = 'flex'; // Muestra el modal
+            event.preventDefault(); // Prevents form from actually submitting
+            modal.style.display = 'flex'; // Displays the modal
         });
 
-        // Cierra el modal al hacer clic en la "x"
         closeBtn.addEventListener('click', function() {
             modal.style.display = 'none';
-            form.submit(); // Envía el formulario después de cerrar el modal
+            form.submit(); // Submits the form after closing the modal
         });
 
-        // Cierra el modal si se hace clic fuera de él
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = 'none';
-                form.submit(); // Envía el formulario después de cerrar el modal
+                form.submit(); // Submits the form if clicking outside modal
             }
         };
     </script>
