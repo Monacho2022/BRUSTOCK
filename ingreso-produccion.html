@@ -18,7 +18,7 @@
         </nav>		
 		<section id="contenido">
 			<h2>Ingreso de Producción</h2><br>
-			<form action="/submit-produccion" method="post">
+			
 				<label for="producto">Referencia:</label>
 				<input type="text" id="producto" name="producto" placeholder="Ingrese la referencia" required><br><br>
 				
@@ -26,84 +26,37 @@
 				<textarea id="descripcion" name="descripcion" placeholder="Ingrese Descripción" rows="1" required></textarea><br><br>
 				
 
-<style>
-  .checkbox-wrapper-47 input[type="checkbox"] {
-    display: none;
-    visibility: hidden;
-  }
 
-  .checkbox-wrapper-47 label {
-    position: relative;
-    padding-left: 2em;
-    padding-right: 1em;
-    line-height: 2;
-    cursor: pointer;
-    display: inline-flex;
-  }
-
-  .checkbox-wrapper-47 label:before {
-    box-sizing: border-box;
-    content: " ";
-    position: absolute;
-    top: 0.3em;
-    left: 0;
-    display: block;
-    width: 1.4em;
-    height: 1.4em;
-    border: 2px solid #9098A9;
-    border-radius: 6px;
-    z-index: -1;
-  }
-
-  .checkbox-wrapper-47 input[type=checkbox]:checked + label {
-    padding-left: 1em;
-    color: #0f5229;
-  }
-  .checkbox-wrapper-47 input[type=checkbox]:checked + label:before {
-    top: 0;
-    width: 100%;
-    height: 2em;
-    background: #b7e6c9;
-    border-color: #2cbc63;
-  }
-
-  .checkbox-wrapper-47 label,
-  .checkbox-wrapper-47 label::before {
-    transition: 0.25s all ease;
-  }
-</style>
 
 				<label for="procesos">Procesos:</label><br><br>
 				<div class="checkbox-wrapper-47">
 					<input type="checkbox" name="cb" id="cb-47" />
 					<label for="cb-47">Bordado</label>
-				  </div>
 
-
-<input type="checkbox" id="estampado" name="procesos" value="estampado">
-<label for="estampado">Estampado</label><br>
+					<input type="checkbox" id="estampado" name="procesos" value="estampado">
+					<label for="estampado">Estampado</label>
 
 					<input type="checkbox" id="costura" name="procesos" value="costura">
-					<label for="costura">Costura</label><br>
+					<label for="costura">Costura</label>
 
 					<input type="checkbox" id="tintoreria" name="procesos" value="tintoreria">
-					<label for="tintoreria">Tintorería</label><br>
+					<label for="tintoreria">Tintorería</label>
 
 					<input type="checkbox" id="ribete" name="procesos" value="ribete">
-					<label for="ribete">Ribete</label><br>
+					<label for="ribete">Ribete</label>
 
 					<input type="checkbox" id="ojal" name="procesos" value="ojal">
-					<label for="ojal">Ojal</label><br>
+					<label for="ojal">Ojal</label>
 
 					<input type="checkbox" id="terminado" name="procesos" value="terminado">
 					<label for="terminado">Terminado</label><br><br><br>
 
-
+				</div>
 
 				<div id="cotenedor">
 					<label for="tallas">
 					 TALLAS
-					</label>
+					</label><br><br>
 					<div class="sizes-list">
 					 <table>
 					  <tr>
@@ -140,17 +93,16 @@
 					  </tr>
 					 </table>
 					</div>
-				   </div>
+				   </div><br><br>
 				   
-				<label for="colores">Colores:</label>
-				<select id="colores" name="colores" required>
-					<option value="" disabled selected>Seleccione un color</option>
-					<option value="rojo">Rojo</option>
-					<option value="azul">Azul</option>
-					<option value="verde">Verde</option>
-					<option value="amarillo">Amarillo</option>
-					<!-- Add more color options as needed -->
-				</select><br><br>
+				   <div class="colors-group">
+					<label for="colores">COLORES</label><br><br>
+					<div class="colors-input">
+					 <input id="colores" type="text"/>
+					 <div class="add-color" onclick="addColor()"></div>
+					 <div id="color-list"></div>
+					</div>
+				   </div><br><br>
 				
 				<label for="fecha">Fecha de Producción:</label>
 				<input type="date" id="fecha" name="fecha" required><br><br>
@@ -162,7 +114,7 @@
 					  <span class="close">&times;</span>
 					  <p>Registro exitoso</p>
 					</div>
-				  </div>
+				</div>
 				  
 			</form>
 		</section>
@@ -191,7 +143,25 @@
 				}
 			};
 		});
-		</script>
+		
+		function addColor() {
+			const colorInput = document.getElementById('colores');
+			const colorList = document.getElementById('color-list');
+			const newColor = colorInput.value.trim();
+			if (newColor) {
+			const colorItem = document.createElement('div');
+			colorItem.textContent = newColor;
+			colorList.appendChild(colorItem);
+			colorInput.value = ''; // Clear the input
+			}
+		}
+
+		function saveForm() {
+			// Logic to save the form data
+			alert('Form saved!');
+		}
+  	</script>
+		
 		
 </body>
 </html>
