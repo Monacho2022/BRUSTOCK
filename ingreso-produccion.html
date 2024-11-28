@@ -24,9 +24,6 @@
 				
 				<label for="descripcion">Descripción:</label>
 				<textarea id="descripcion" name="descripcion" placeholder="Ingrese Descripción" rows="1" required></textarea><br><br>
-				
-
-
 
 				<label for="procesos">Procesos:</label><br><br>
 				<div class="checkbox-wrapper-47">
@@ -93,16 +90,22 @@
 					  </tr>
 					 </table>
 					</div>
-				   </div><br><br>
+				   </div><br>
 				   
 				   <div class="colors-group">
-					<label for="colores">COLORES</label><br><br>
+					<label for="colores">
+					 COLORES
+					</label>
 					<div class="colors-input">
 					 <input id="colores" type="text"/>
-					 <div class="add-color" onclick="addColor()"></div>
+					 <div class="add-color" onclick="addColor()">+</div>
 					 <div id="color-list"></div>
 					</div>
-				   </div><br><br>
+				   </div>
+				   <div class="save-icon">
+					<img alt="Save icon" src="..." onclick="saveForm()"/>
+				   </div>
+				   </div>
 				
 				<label for="fecha">Fecha de Producción:</label>
 				<input type="date" id="fecha" name="fecha" required><br><br>
@@ -160,6 +163,17 @@
 			// Logic to save the form data
 			alert('Form saved!');
 		}
+		function addColor() {
+    const colorInput = document.getElementById('colores');
+    const colorList = document.getElementById('color-list');
+    const newColor = colorInput.value.trim();
+    if (newColor) {
+     const colorItem = document.createElement('div');
+     colorItem.textContent = newColor;
+     colorList.appendChild(colorItem);
+     colorInput.value = ''; // Clear the input
+    }
+   }
   	</script>
 		
 		
