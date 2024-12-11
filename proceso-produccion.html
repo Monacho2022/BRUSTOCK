@@ -45,35 +45,42 @@
             </ul>
         </nav>
         <section id="contenido">
-            <h2>Proceso de Producción</h2>
+            <h2>Proceso de Producción</h2><br>
             <form id="produccionForm" action="/submit-produccion" method="post">
-                <label for="producto">Referencia:</label>
-                <input type="text" id="producto" name="producto" placeholder="Ingrese la referencia" required><br><br>
+                <label for="producto"></label>
+                <input type="text" id="producto" placeholder="Ingrese la referencia" required name="producto" placeholder="Ingrese la referencia" required><br><br>
                 
-                <label for="procesos">Procesos:</label><br><br>
-                <input class="checkbox-wrapper-47" type="checkbox" id="bordado" name="procesos[]" value="bordado">
-                <label for="bordado">Bordado</label><br>
                 
-                <input type="checkbox" id="estampado" name="procesos[]" value="estampado">
-                <label for="estampado">Estampado</label><br>
+                <form id="form-procesos">
+                    <div class="checkbox-wrapper-47">
+                        <label for="procesos">Selecciona al menos un proceso:</label><br><br>
                 
-                <input type="checkbox" id="costura" name="procesos[]" value="costura">
-                <label for="costura">Costura</label><br>
+                        <div>
+                            <input type="checkbox" id="bordado" name="procesos[]" value="bordado" required>
+                            <label for="bordado">Bordado</label>
+                        </div>
                 
-                <input type="checkbox" id="tintoreria" name="procesos[]" value="tintoreria">
-                <label for="tintoreria">Tintorería</label><br>
+                        <div>
+                            <input type="checkbox" id="estampado" name="procesos[]" value="estampado">
+                            <label for="estampado">Estampado</label>
+                        </div>
                 
-                <input type="checkbox" id="ribete" name="procesos[]" value="ribete">
-                <label for="ribete">Ribete</label><br>
+                        <div>
+                            <input type="checkbox" id="costura" name="procesos[]" value="costura">
+                            <label for="costura">Costura</label>
+                        </div>
                 
-                <input type="checkbox" id="ojal" name="procesos[]" value="ojal">
-                <label for="ojal">Ojal</label><br>
+                        <div>
+                            <input type="checkbox" id="tintoreria" name="procesos[]" value="tintoreria">
+                            <label for="tintoreria">Tintorería</label>
+                        </div>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
                 
-                <input type="checkbox" id="terminado" name="procesos[]" value="terminado">
-                <label for="terminado">Terminado</label><br><br>
                 
                 <div id="contenedor">
-                    <label for="tallas">Tallas:</label><br><br>
+                    <label for="tallas"></label>
                     <div class="sizes-list">
                         <table>
                             <tr>
