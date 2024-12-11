@@ -17,15 +17,12 @@ body {
     width: 90%;
     max-width: 900px;
     margin: 100px auto;
-    
 }
 
 /* Header */
 header {
     background: #1A3B6D;
     padding: 1%;
-    
-    
 }
 
 header h1 {
@@ -34,7 +31,6 @@ header h1 {
     font-weight: bold;
     font-family: 'Showcard Gothic', sans-serif;
     margin: 10px;
-
 }
 
 /* Navigation */
@@ -45,7 +41,6 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-   
 }
 
 nav h2 {
@@ -53,10 +48,13 @@ nav h2 {
     font-family: 'Showcard Gothic', sans-serif;
     margin: 0;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
 }
+
+/* Checkbox Styling */
 .checkbox-wrapper-47 input[type="checkbox"] {
     display: none;
     visibility: hidden;
@@ -85,11 +83,12 @@ a{
     z-index: -1;
 }
 
-.checkbox-wrapper-47 input[type=checkbox]:checked + label {
+.checkbox-wrapper-47 input[type="checkbox"]:checked + label {
     padding-left: 1em;
     color: black;
 }
-.checkbox-wrapper-47 input[type=checkbox]:checked + label:before {
+
+.checkbox-wrapper-47 input[type="checkbox"]:checked + label:before {
     top: 0;
     width: 100%;
     height: 2em;
@@ -157,7 +156,6 @@ a{
     background: #1A3B6D;
     margin-top: 5px;
     padding: 20px;
-    
 }
 
 /* Paragraph Styling */
@@ -168,81 +166,34 @@ p {
     line-height: 1.5;
 }
 
-
-/* Estilo para las casillas de verificación (checkboxes) de procesos */
-input[type="checkbox"] {
-    margin-right: 10px;
+/* Uniform input styles */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #1A3B6D;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
     margin-bottom: 10px;
 }
 
-/* Mejorar la visualización de la tabla de tallas con grid */
-.sizes-list table {
-    width: 100%;
-    border-collapse: collapse;
-}
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+    
 
-.sizes-list td {
-    width: 10%;
-    padding: 8px;
-    text-align: center;
 }
 
 /* Modal de confirmación */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Estilo para el select de colores */
-select {
-    padding: 5px;
-    width: 100%;
-    max-width: 200px;
-}
-
-/* Espaciado para los inputs */
-input[type="text"],
-input[type="date"],
-textarea {
-    width: 50%;
-    padding: 1px;
-    margin-bottom: 1px;
-    
-}
-
-
-
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -255,14 +206,14 @@ textarea {
 }
 
 .modal-content {
-    background-color: #1A3B6D;
+    background-color: white;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 300px;
-    text-align: center;
+    max-width: 400px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .close {
@@ -270,8 +221,8 @@ textarea {
     float: right;
     font-size: 28px;
     font-weight: bold;
-    cursor: pointer;
     transition: color 0.3s;
+    cursor: pointer;
 }
 
 .close:hover {
@@ -290,18 +241,6 @@ textarea {
     margin-bottom: 5px;
     font-size: 1.2rem;
     color: whitesmoke;
-}
-
-.login-form input[type="text"],
-.login-form input[type="password"] {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #1A3B6D;
-    border-radius: 10px;
-    font-size: 1rem;
-    outline: none;
-    
 }
 
 .login-form input[type="submit"] {
