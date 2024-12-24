@@ -31,7 +31,7 @@
         }
 
         .modal-button {
-            margin-top: 20px;
+            margin-top: 10px;
             padding: 10px 20px;
             background-color: royalblue;
             color: white;
@@ -65,15 +65,15 @@
             </ul>
         </nav>
         <section id="contenido">
-            <h2>Arreglos</h2>
+            <h2>Arreglos</h2><br>
             <form id="arregloForm">
-                <label for="producto">Producto:</label>
-                <input type="text" id="producto" name="producto" required><br><br>
+                <label for="producto"></label>
+                <input type="text" placeholder="Producto" id="producto" name="producto" required><br><br>
                 
-                <label for="descripcion">Descripción del Arreglo:</label>
-                <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br><br>
+                <label for="descripcion"></label>
+                <textarea id="descripcion" name="descripcion" rows="1" cols="1" placeholder="Descripcion " required></textarea><br><br>
                 
-                <label for="fecha">Fecha del Arreglo:</label>
+                <label for="fecha"></label>
                 <input type="date" id="fecha" name="fecha" required><br><br>
                 
                 <input type="submit" value="Guardar">
@@ -87,7 +87,7 @@
         <div id="modal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h3>Datos Ingresados</h3>
+                <h3>Datos Ingresados</h3><br>
                 <p><strong>Producto:</strong> <span id="modalProducto"></span></p>
                 <p><strong>Descripción:</strong> <span id="modalDescripcion"></span></p>
                 <p><strong>Fecha:</strong> <span id="modalFecha"></span></p>
