@@ -4,39 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ver Perfil Pedido - BRUSTOCK</title>
-	<link rel="stylesheet" href="/CSS/Estilos.css">
+	<link rel="stylesheet" href="/css/Estilos.css">
 	<style>
-		/* Estilos básicos */
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-		#contenedor {
-			width: 80%;
-			margin: 0 auto;
-		}
-		header, footer {
-			text-align: center;
-			padding: 10px;
-			color: white;
-		}
-		form {
-			margin: 20px 0;
-		}
-		input[type="text"], input[type="submit"] {
-			padding: 10px;
-			margin: 5px 0;
-		}
-		input[type="submit"] {
-			background-color: #3498db;
-			color: white;
-			border: none;
-			cursor: pointer;
-		}
-		input[type="submit"]:hover {
-		
-		}
+	
 
 		/* Modal */
 		.modal {
@@ -91,17 +61,17 @@
 		</header>
 		<nav>
             <ul>
-                <li><a href="/inicio.html">Inicio</a></li>
+                <li><a href="/inicio.html"><img src="/img/icons8-home-50.png" alt="Inicio" style="width: 20px; vertical-align: middle;"></a></li></li>
             </ul>
         </nav>
 		<section id="contenido">
-			<h2>Ver Perfil Pedido</h2>
+			<h2>Perfil Pedido</h2><br>
 			<!-- Formulario -->
 			<form id="form-perfil">
-				<label for="pedido-id">ID del Pedido:</label>
-				<input type="text" id="pedido-id" name="pedido-id" placeholder="Ingrese el ID" required>
+				<label for="pedido-id"></label>
+				<input type="text" id="pedido-id" name="pedido-id" placeholder="ID del Pedido" required>
 				<br><br>
-				<input type="submit" value="Ver Perfil">
+				<input type="submit" value="Ver">
 			</form>
 		</section>
 
@@ -122,6 +92,7 @@
 							<th>Color (AM)</th>
 							<th>Color (AO)</th>
 							<th>Total Talla</th>
+							<th>estado</th>
 						</tr>
 					</thead>
 					<tbody id="tabla-datos">
