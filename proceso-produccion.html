@@ -48,36 +48,22 @@
             <h2>Proceso de Producción</h2><br>
             <form id="produccionForm" action="/submit-produccion" method="post">
                 <label for="producto"></label>
-                <input type="text" id="producto" placeholder="Ingrese la referencia" required name="producto" placeholder="Ingrese la referencia" required><br><br>
-                
-                
-                <form id="form-procesos">
-                    <div class="checkbox-wrapper-47">
-                        <label for="procesos">Selecciona al menos un proceso:</label><br><br>
-                
-                        <div>
-                            <input type="checkbox" id="bordado" name="procesos[]" value="bordado" required>
-                            <label for="bordado">Bordado</label>
-                        </div>
-                
-                        <div>
-                            <input type="checkbox" id="estampado" name="procesos[]" value="estampado">
-                            <label for="estampado">Estampado</label>
-                        </div>
-                
-                        <div>
-                            <input type="checkbox" id="costura" name="procesos[]" value="costura">
-                            <label for="costura">Costura</label>
-                        </div>
-                
-                        <div>
-                            <input type="checkbox" id="tintoreria" name="procesos[]" value="tintoreria">
-                            <label for="tintoreria">Tintorería</label>
-                        </div>
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
-                
+                <input type="text" id="producto" placeholder="Ingrese la referencia" required name="producto" placeholder="Ingrese la referencia" required>
+                <label for="procesos"></label>
+                <div class="checkbox-wrapper-47">
+                    <input type="checkbox" id="bordado" name="procesos[]" value="bordado">
+                    <label for="bordado">Bordado</label>
+
+                    <input type="checkbox" id="estampado" name="procesos[]" value="estampado">
+                    <label for="estampado">Estampado</label>
+
+                    <input type="checkbox" id="costura" name="procesos[]" value="costura">
+                    <label for="costura">Costura</label>
+
+                    <input type="checkbox" id="tintoreria" name="procesos[]" value="tintoreria">
+                    <label for="tintoreria">Tintorería</label>
+                    
+                </div>    
                 
                 <div id="contenedor">
                     <label for="tallas"></label>
@@ -92,9 +78,9 @@
                             </tr>
                         </table>
                     </div>
-                </div><br><br>
+                </div>
                 
-                <label for="fecha">Fecha de Producción:</label>
+                <label for="fecha"></label>
                 <input type="date" id="fecha" name="fecha" required><br><br>
                 
                 <input type="submit" value="Guardar">

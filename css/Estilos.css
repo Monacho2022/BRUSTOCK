@@ -257,6 +257,10 @@ input[type="radio"] {
 .login-form input[type="submit"]:hover {
     background-color: royalblue;
 }
+#contenedor{
+    display: inline;
+    
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
