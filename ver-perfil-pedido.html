@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ver Perfil Pedido - BRUSTOCK</title>
-	<link rel="stylesheet" href="/CSS/Estilos.css">
+	<link rel="stylesheet" href="/css/Estilos.css">
 	<style>
+<<<<<<< HEAD
 		/* Estilos básicos */
 		body {
 			font-family: Arial, sans-serif;
@@ -38,6 +39,9 @@
 			background-color: #2ecc71;
 			transition: background-color 0.3s;		
 		}
+=======
+	
+>>>>>>> 66a536506bf259dae650f0f05d9cef179097eda4
 
 		/* Modal */
 		.modal {
@@ -92,17 +96,17 @@
 		</header>
 		<nav>
             <ul>
-                <li><a href="/inicio.html">Inicio</a></li>
+                <li><a href="/inicio.html"><img src="/img/icons8-home-50.png" alt="Inicio" style="width: 20px; vertical-align: middle;"></a></li></li>
             </ul>
         </nav>
 		<section id="contenido">
-			<h2>Ver Perfil Pedido</h2>
+			<h2>Perfil Pedido</h2><br>
 			<!-- Formulario -->
 			<form id="form-perfil">
-				<label for="pedido-id">ID del Pedido:</label>
-				<input type="text" id="pedido-id" name="pedido-id" placeholder="Ingrese el ID" required>
+				<label for="pedido-id"></label>
+				<input type="text" id="pedido-id" name="pedido-id" placeholder="ID del Pedido" required>
 				<br><br>
-				<input type="submit" value="Ver Perfil">
+				<input type="submit" value="Ver">
 			</form>
 		</section>
 
@@ -123,6 +127,7 @@
 							<th>Color (AM)</th>
 							<th>Color (AO)</th>
 							<th>Total Talla</th>
+							<th>estado</th>
 						</tr>
 					</thead>
 					<tbody id="tabla-datos">

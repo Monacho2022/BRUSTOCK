@@ -10,23 +10,39 @@
 	<div id="contenedor">	
 		<header>
 			<h1>BRUSTOCK</h1>
-		</header>
-		<nav>
-            <ul>
-                <li><a href="/inicio.html">Inicio</a></li>
-            </ul>
-        </nav>
-		<section id="contenido">
-			<h2>Ver Perfil Cliente</h2>
-			<form action="/ver-perfil-cliente" method="post">
-				<label for="cliente-id">ID del Cliente:</label>
-				<input type="text" id="cliente-id" name="cliente-id"><br><br>
-				<input type="submit" value="Ver Perfil">
-			</form>
-		</section>
-		<footer>
-			<p>&copy; 2024 BRUSTOCK. Todos los derechos reservados.</p>
-		</footer>
-	</div>
-</body>
-</html>
+		</header><!DOCTYPE html>
+		<html lang="es">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Ver Perfil Cliente</title>
+			<link rel="stylesheet" href="styles.css"> <!-- Archivo CSS externo opcional -->
+		</head>
+		<body>
+			<div class="container">
+				<nav>
+					<ul>
+						<li><a href="/inicio.html"><img src="/img/icons8-home-50.png" alt="Inicio" style="width: 20px; vertical-align: middle;"></a></li>
+					</ul>
+				</nav>
+				<section id="contenido">
+					<h2>Ver Perfil Cliente</h2><br>
+					<form action="/ver-perfil-cliente" method="post" class="formulario-perfil">
+						<label for="cliente-id"></label>
+						<input 
+							type="text" 
+							id="cliente-id" 
+							name="cliente-id" 
+							placeholder="Ingrese el ID del cliente" 
+							required>
+						<br><br>
+						<input type="submit" value="Ver Perfil" class="btn-enviar">
+					</form>
+				</section>
+				<footer>
+					<p>&copy; 2024 BRUSTOCK. Todos los derechos reservados.</p>
+				</footer>
+			</div>
+		</body>
+		</html>
+		
